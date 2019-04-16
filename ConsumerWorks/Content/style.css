@@ -1,0 +1,246 @@
+﻿@font-face {
+    font-family: 'moiser';
+    src: url('../fonts/orkney-medium-italic.woff') format('truetype'); /* Make sure your file location is right */
+}
+/*Validation Styles*/
+/*.field-validation-error
+{
+    color: #f00;
+}
+.field-validation-valid
+{
+    display: none;
+}
+.input-validation-error
+{
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #f00;
+}
+.validation-summary-valid
+{
+    display: none;
+}*/
+
+/*Map Styles*/
+#map {
+    height: 400px; /* The height is 400 pixels */
+    width: 100%; /* The width is the width of the web page */
+}
+
+/*Template Styles*/
+.top-nav, #btn-create, .btm-nav {
+    background-color: #170A1C;
+}
+
+.main-tron {
+    background-color: #EFE5BF;
+}
+
+.nav-pills .nav-link, .input-group-btn {
+    color: #EFE5BF;
+    background-color: #2a4154;
+}
+
+.logo-link {
+    font-family: moiser;
+    color: #2a4154;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link, .nav-pills .nav-link .active{
+    color: #170A1C;
+    background-color: #EFE5BF;
+}
+
+.poster {
+    background-color: #2a4154;
+}
+
+
+.rate {
+    float: bottom;
+    height: 46px;
+    padding: 0 10px;
+}
+
+    .rate:not(:checked) > input {
+        position: absolute;
+        top: -9999px;
+    }
+
+    .rate:not(:checked) > label {
+        float: none;
+        width: 1em;
+        overflow: hidden;
+        white-space: nowrap;
+        cursor: pointer;
+        font-size: 30px;
+        color: #ccc;
+    }
+
+        .rate:not(:checked) > label:before {
+            content: '★ ';
+        }
+
+    .rate > input:checked ~ label {
+        color: #ffc700;
+    }
+
+    .rate:not(:checked) > label:hover,
+    .rate:not(:checked) > label:hover ~ label {
+        color: #deb217;
+    }
+
+    .rate > input:checked + label:hover,
+    .rate > input:checked + label:hover ~ label,
+    .rate > input:checked ~ label:hover,
+    .rate > input:checked ~ label:hover ~ label,
+    .rate > label:hover ~ input:checked ~ label {
+        color: #c59b08;
+    }
+
+.lightlit {
+    background-color: rgba(158, 158, 158, 0.22);
+}
+
+    .card-subheader-ws {
+        color: #9E9E9E;
+    }
+
+.profile-platform, .help-platform, .listing-platform {
+    background-color: #263a4c;
+}
+
+h2.card-title {
+    color: #9E9E9E;
+}
+
+.super-title, h3.card-title{
+   color:rgb(121, 153, 169);
+}
+
+.impact, .common-tags {
+    color: cadetblue;
+}
+
+.impact {
+    font-weight: 500;
+}
+
+.darklight {
+    color: cadetblue;
+    background-color: rgb(121, 153, 169);
+}
+.userFont {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #000000;
+    font-weight: 500;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+.pFont {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 17px;
+    letter-spacing: 1px;
+    word-spacing: 0px;
+    color: #000000;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+.detailsFont {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 15px;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    color: #000000;
+    //font-weight: 400px;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+.job-intro {
+    background-color: rgb(239, 229, 191);
+}
+
+.btn-apply {
+    background-color: rgba(23, 10, 28, 0.7803921568627451);
+    border-color: rgba(23, 10, 28, 0.15);
+}
+
+.job-title{
+    color:cadetblue;
+    font-weight: 800;
+}
+
+.announcement-header {
+    font-weight: 300;
+    font-size:2rem;
+}
+
+.trending-box {
+    color: #fff;
+    font-weight: 900;
+    background-color: rgb(123, 178, 204);
+}
+
+.amazing-header {
+    background-color: #009688;
+    color: #fff;
+}
+
+.amazing-text {
+    text-decoration: none;
+    text-decoration-line: none;
+    color: #d88e8e;
+    font-weight: bolder;
+}
+
+.contract-tron {
+    background-color: rgba(59, 24, 121, 0.13);
+}
+
+/* Style all font awesome icons */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 80px;
+    text-align: center;
+    text-decoration: none;
+}
+
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+/*Map Styles*/
+          

@@ -1,0 +1,68 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using WebMatrix.Data
+
+@{
+    if (IsPost)
+    {
+        var db = Database.OpenConnectionString("Data Source=CISVM-MSVRSQL\\SPRING2019;Initial Catalog=n00121210;Integrated Security=True", "System.Data.SqlClient");
+        var fname = Context.Request.Form["FName"];
+        var lname = Context.Request.Form["LName"];
+        var city = Context.Request.Form["City"];
+        var state = Context.Request.Form["State"];
+        var cemail = Context.Request.Form["CEmail"];
+        var cpassword = Context.Request.Form["CPassword"];
+
+        var user = Context.Request.Form["User"];
+        var loginpass = Context.Request.Form["LoginPass"];
+
+        var insertQuery = "INSERT INTO users(email, fname, lname, city, ustate, pass) VALUES(@0, @1, @2, @3, @4, @5)";
+        db.Execute(insertQuery, cemail, fname, lname, city, state, cpassword);
+        Response.Redirect("PersonalProfile");
+    }
+
+
+}
+
+@section NavLinks{
+    <input type="text" class="form-control" name="User" placeholder="User">
+    <input type="password" class="form-control" name="LoginPass" placeholder="Password">
+    <div class="input-group-btn">
+        <button class="btn login" type="submit">Login</button>
+    </div>
+}
+
+<div id="map"></div>
+<div class="jumbotron main-tron">
+    <div class="container">
+        <form class="shadow-sm p-3 mb-5 bg-white rounded col-sm-5" method="post">
+            <h1>Land Your First Gig!</h1>
+            <div class="form-group">
+                <!--<div class="col-sm-4">-->
+                <input type="text" class="form-control rounded-top" name="CEmail" placeholder="Email">
+                <!--</div>-->
+                <input type="text" class="form-control" name="FName" placeholder="Your First Name">
+                <input type="text" class="form-control" name="LName" placeholder="Your Last Name">
+                <input type="text" class="form-control" name="City" placeholder="Your Current City">
+                <input type="text" class="form-control" name="State" placeholder="Your Current State">
+                <input type="password" class="form-control rounded" name="CPassword" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="agree-term" id="agree-term" />
+                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+            </div>
+            <div class="form-textbox">
+                <button class="btn btn-secondary col-sm-12" id="btn-create">Create Account</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
